@@ -1,0 +1,8 @@
+{
+  "name": "Blend Digital — Marketing, Posicionamento & Audiovisual",
+  "description": "Site institucional da Blend Digital. Estratégia de posicionamento digital, social media, audiovisual, presença local, WhatsApp comercial e criação de sites.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
