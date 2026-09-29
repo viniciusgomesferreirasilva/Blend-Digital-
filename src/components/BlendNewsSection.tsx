@@ -162,8 +162,13 @@ export const BlendNewsSection: React.FC<BlendNewsSectionProps> = ({
                     }}
                   />
                 </div>
+              ) : activeArticle.sourceUrl ? (
+                <div className="w-full aspect-[16/9] rounded-2xl bg-[#800509] text-white flex flex-col justify-between p-7 sm:p-10 overflow-hidden">
+                  <span className="text-xs font-bold tracking-[.18em] uppercase text-white/80">Blend News / {activeArticle.category}</span>
+                  <strong className="text-3xl sm:text-5xl font-extrabold tracking-[-.055em] leading-tight max-w-xl">{activeArticle.title}</strong>
+                </div>
               ) : (
-                /* Discreet editable placeholder as requested: "sem apresentar uma imagem inventada como se fosse da matéria" */
+                /* Keep the existing editorial image placeholder for older stories awaiting real photos. */
                 <div className="w-full aspect-[16/9] rounded-2xl border-2 border-dashed border-[#DCD6CE] bg-[#FAF9F6] flex flex-col items-center justify-center p-6 text-center text-neutral-400">
                   <span className="text-xs font-bold uppercase tracking-widest text-neutral-500 mb-1">
                     FOTO EM BREVE
@@ -178,6 +183,13 @@ export const BlendNewsSection: React.FC<BlendNewsSectionProps> = ({
               <div className="pt-2">
                 <ArticleBody content={activeArticle.content} />
               </div>
+
+              {activeArticle.sourceUrl && (
+                <div className="border-t border-[#E8E4DF] pt-5 text-sm">
+                  <span className="block text-xs font-bold tracking-wider uppercase text-[#800509] mb-2">Fonte oficial</span>
+                  <a className="font-bold text-[#800509] hover:underline break-words" href={activeArticle.sourceUrl} target="_blank" rel="noopener noreferrer">{activeArticle.sourceLabel || 'Ler fonte original'} ↗</a>
+                </div>
+              )}
 
               {/* CTA at article footer */}
               <div className="mt-10 p-6 bg-[#FAF9F6] border border-[#E8E4DF] rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -260,10 +272,10 @@ export const BlendNewsSection: React.FC<BlendNewsSectionProps> = ({
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
                 <div className="lg:col-span-8">
                   <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-[#800509] font-display leading-[1.08] tracking-tight text-balance">
-                    Conectando pessoas, negócios e oportunidades.
+                    Histórias e ideias que <span className="font-serif italic font-normal">movimentam o mercado.</span>
                   </h2>
                   <p className="mt-4 text-sm sm:text-base text-neutral-600 max-w-2xl leading-relaxed font-normal">
-                    A revista da Blend Digital agora continua como blog: um espaço para contar histórias, apresentar profissionais, destacar negócios, registrar acontecimentos e compartilhar ideias que movimentam Santana de Parnaíba e região.
+                    Da primeira edição da revista às pautas de marketing, audiovisual e tecnologia: histórias de pessoas e ideias úteis para quem constrói marcas.
                   </p>
                 </div>
 
@@ -348,7 +360,7 @@ export const BlendNewsSection: React.FC<BlendNewsSectionProps> = ({
                     <span>02 — ÚLTIMAS MATÉRIAS</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-950">
-                    Artigos, Entrevistas &amp; Pautas da Edição
+                    Últimas matérias da Blend News
                   </h3>
                 </div>
 
@@ -379,7 +391,7 @@ export const BlendNewsSection: React.FC<BlendNewsSectionProps> = ({
                   <Search className="w-4 h-4 text-neutral-400 absolute left-3 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
-                    placeholder="Buscar matérias da edição..."
+                    placeholder="Buscar matérias..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full text-xs pl-9 pr-3 py-2 bg-[#FAF9F6] border border-[#E2DDD6] rounded-lg focus:outline-none focus:border-[#800509] font-normal"
@@ -389,11 +401,12 @@ export const BlendNewsSection: React.FC<BlendNewsSectionProps> = ({
 
               {/* Matérias Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredArticles.map((article, idx) => (
-                  <div
+                {filteredArticles.map((article) => (
+                  <button
+                    type="button"
                     key={article.id}
                     onClick={() => setActiveArticle(article)}
-                    className="group bg-white border border-[#E8E4DF] rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:shadow-md hover:border-[#D0C9BF] transition-all duration-200 cursor-pointer card-hover-lift"
+                    className="group text-left w-full bg-white border border-[#E8E4DF] rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:shadow-md hover:border-[#D0C9BF] transition-all duration-200 cursor-pointer card-hover-lift focus-visible:outline-2 focus-visible:outline-[#800509]"
                   >
                     <div>
                       {/* Top tag: CATEGORIA · EDIÇÃO #01 */}
@@ -402,7 +415,7 @@ export const BlendNewsSection: React.FC<BlendNewsSectionProps> = ({
                           {article.category}
                         </span>
                         <span className="text-[10px] text-neutral-400">
-                          0{idx + 2} · EDIÇÃO #01
+                          {article.date}
                         </span>
                       </div>
 
@@ -417,11 +430,11 @@ export const BlendNewsSection: React.FC<BlendNewsSectionProps> = ({
 
                     <div className="pt-4 border-t border-[#F0ECE6] flex items-center justify-between text-xs">
                       <span className="font-bold text-neutral-900 group-hover:text-[#800509] inline-flex items-center gap-1.5 transition-colors">
-                        <span>Falar sobre esta pauta</span>
+                        <span>Ler matéria completa</span>
                         <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                       </span>
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>

@@ -65,7 +65,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenContact 
     {
       index: '02',
       name: 'Crescimento',
-      badge: 'MAIS PROCURADO',
+      badge: null,
       description: 'Para empresas que querem crescer, fortalecer a marca e gerar mais oportunidades através do digital.',
       items: [
         'Tudo do Plano Essencial',
@@ -98,7 +98,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenContact 
         'Campanhas',
         'Comunicação corporativa',
         'Estratégias de fidelização',
-        'Tráfego pago*',
+        'Tráfego pago',
         'Otimização contínua',
         'Análise de resultados',
         'Reunião estratégica',
@@ -291,11 +291,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenContact 
         {/* Integration Callout */}
         <div className="mt-14 bg-white border border-[#E2DDD6] p-6 sm:p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-5">
           <div className="max-w-xl">
-            <h4 className="text-base sm:text-lg font-bold text-neutral-950 font-display">
-              Precisa de um diagnóstico para saber por onde começar?
+            <span className="text-[11px] font-bold tracking-wider text-[#800509] uppercase">Por onde começar</span>
+            <h4 className="text-xl sm:text-2xl font-bold text-neutral-950 font-display mt-2">
+              Não sabe qual serviço faz sentido para sua empresa?
             </h4>
-            <p className="text-xs sm:text-sm text-neutral-600 mt-1 font-normal">
-              Avaliamos o momento atual da sua empresa para indicar exatamente quais canais demandam atenção prioritária, sem custos desnecessários.
+            <p className="text-sm sm:text-base text-neutral-600 mt-2 font-normal leading-relaxed">
+              Conte qual é seu desafio. A Blend ajuda a definir as prioridades antes de escolher um pacote.
             </p>
           </div>
 
@@ -304,7 +305,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenContact 
               onClick={() => onOpenContact()}
               className="w-full sm:w-auto px-6 py-3 text-xs sm:text-sm font-bold text-white bg-[#800509] hover:bg-[#800F10] active:bg-[#760010] rounded-lg transition-colors cursor-pointer interactive-tap text-center shadow-xs"
             >
-              Solicitar Diagnóstico
+              Explicar meu projeto
             </button>
           </div>
         </div>

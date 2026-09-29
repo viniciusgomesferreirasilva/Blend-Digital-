@@ -10,6 +10,7 @@ import { BlendNewsSection } from './components/BlendNewsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
+import { CapabilitiesSection } from './components/CapabilitiesSection';
 import { INITIAL_NEWS_ARTICLES } from './data/content';
 import { NavPage, NewsArticle } from './types';
 
@@ -17,12 +18,19 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState<NavPage>('home');
   const [prefilledService, setPrefilledService] = useState<string | null>(null);
 
-  // Persistent articles state (stored in localStorage with v4 key for updated August 2026 edition)
+  // Keep any locally edited articles from the prior edition while adding new
+  // editorial stories once. Subsequent edits, including deletions, stay intact.
   const [articles, setArticles] = useState<NewsArticle[]>(() => {
     try {
-      const saved = localStorage.getItem('blend_digital_articles_v4');
-      if (saved) {
-        return JSON.parse(saved);
+      const current = localStorage.getItem('blend_digital_articles_v5');
+      if (current) return JSON.parse(current);
+      const previous = localStorage.getItem('blend_digital_articles_v4');
+      if (previous) {
+        const oldArticles: NewsArticle[] = JSON.parse(previous);
+        const newStories = INITIAL_NEWS_ARTICLES.filter((article) =>
+          article.sourceUrl && !oldArticles.some((old) => old.id === article.id)
+        );
+        return [...newStories, ...oldArticles];
       }
     } catch {
       // Fallback
@@ -32,7 +40,7 @@ export default function App() {
 
   useEffect(() => {
     try {
-      localStorage.setItem('blend_digital_articles_v4', JSON.stringify(articles));
+      localStorage.setItem('blend_digital_articles_v5', JSON.stringify(articles));
     } catch {
       // Ignore storage errors
     }
@@ -130,6 +138,9 @@ export default function App() {
 
         {/* 4. Audiovisual, Videomaker & Storymaker */}
         <AudiovisualSection />
+
+        {/* Capabilities and approach from the updated Blend site. */}
+        <CapabilitiesSection onNavigate={handleNavigate} />
 
         {/* 
           5. Blend News (Blog Integrado)
