@@ -24,6 +24,8 @@ export interface NewsArticle {
   authorRole: string;
   imageUrl: string;
   featured?: boolean;
+  sourceUrl?: string;
+  sourceLabel?: string;
 }
 
 export interface Collaborator {

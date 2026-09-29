@@ -147,6 +147,102 @@ export const SERVICES_DATA: ServiceItem[] = [
 ];
 
 export const INITIAL_NEWS_ARTICLES: NewsArticle[] = [
+  {
+    id: 'meta-creators-midia-2026',
+    title: 'Creators viraram mídia: o que a nova aposta da Meta muda para as marcas',
+    slug: 'creators-viraram-midia-meta',
+    category: 'Marketing · Creators',
+    date: '28 setembro 2026',
+    readTime: '3 min de leitura',
+    author: 'Equipe Blend Digital',
+    authorRole: 'Blend News',
+    imageUrl: '',
+    excerpt: 'O Creator Marketing Hub aproxima descoberta de criadores, conteúdo e anúncios de parceria. O que isso significa para a estratégia das marcas?',
+    content: `A Meta anunciou o Creator Marketing Hub, uma plataforma planejada para reunir o Creator Marketplace e o Partnership Ads Hub. A proposta é facilitar uma jornada que hoje costuma acontecer em ferramentas separadas: encontrar criadores, identificar conteúdos relacionados à marca e transformá-los em anúncios de parceria.
+
+A novidade também prevê a descoberta de criadores do Facebook e do Instagram em um mesmo ambiente. Para as marcas, isso aproxima duas decisões que precisam andar juntas: **quem conta a história** e **como essa história chega ao público**.
+
+### Do conteúdo à distribuição
+
+Na prática, uma campanha pode começar com um vídeo criado em parceria, observar a resposta das pessoas e usar os aprendizados para decidir quais conteúdos merecem investimento em mídia. Isso exige mais do que escolher um influenciador pelo número de seguidores. É preciso alinhar público, linguagem, qualidade audiovisual, autorização de uso e objetivo da campanha.
+
+### O olhar da Blend
+
+1. O conteúdo parece natural para quem acompanha o criador?
+2. Apresenta a marca com clareza?
+3. Há um resultado definido para avaliar?
+
+Quando criação, audiovisual e mídia trabalham com o mesmo objetivo, a parceria tem mais chance de produzir conteúdo relevante para as pessoas e útil para o negócio.
+
+O anúncio oficial da Meta foi publicado em 23 de junho de 2026. Na ocasião, o Creator Marketing Hub foi anunciado para lançamento posterior; a disponibilidade deve ser confirmada antes de planejar seu uso.`,
+    sourceUrl: 'https://about.fb.com/br/news/2026/06/cannes-lions-2026-novas-ferramentas-criativas-e-de-criadores-para-todos-os-profissionais-de-marketing-cruzarem-a-fronteira-da-ia/',
+    sourceLabel: 'Comunicado oficial da Meta',
+    featured: false,
+  },
+  {
+    id: 'youtube-google-demand-gen-2026',
+    title: 'YouTube aproxima anúncios em vídeo da conversa com o cliente',
+    slug: 'youtube-anuncios-conversa-cliente',
+    category: 'Google Ads · Vídeo',
+    date: '28 setembro 2026',
+    readTime: '3 min de leitura',
+    author: 'Equipe Blend Digital',
+    authorRole: 'Blend News',
+    imageUrl: '',
+    excerpt: 'Novos recursos de Demand Gen mostram como vídeo, resposta imediata e página de destino podem trabalhar juntos.',
+    content: `O Google apresentou em setembro atualizações para campanhas Demand Gen. Entre elas está um recurso anunciado para permitir que pessoas conversem com uma IA ao lado de anúncios em vídeo com catálogo de produtos no YouTube, obtendo respostas sobre a marca sem sair daquele contexto.
+
+O anúncio também descreve caminhos mais diretos das peças visuais para a página de destino, incluindo a possibilidade de abrir a página com um toque em determinados anúncios de imagem no YouTube Shorts e no Gmail.
+
+### O vídeo precisa continuar a conversa
+
+Para uma empresa, a novidade reforça uma questão prática: chamar atenção é só o primeiro passo. O criativo precisa apresentar uma proposta clara, antecipar dúvidas reais e levar a pessoa para uma próxima etapa coerente. Se o anúncio promete uma coisa e a página explica outra, a experiência perde força.
+
+### O olhar da Blend
+
+1. O vídeo mostra rapidamente para quem é a oferta?
+2. As dúvidas mais comuns têm respostas simples?
+3. A página ou o atendimento continua a mesma mensagem?
+
+A campanha fica mais consistente quando criação, mídia e atendimento seguem uma direção comum. A disponibilidade de cada recurso deve ser conferida na conta e no mercado antes do planejamento.
+
+Atualização de Demand Gen publicada pelo Google em 24 de setembro de 2026.`,
+    sourceUrl: 'https://blog.google/products/ads-commerce/demand-gen-drop-september-2026/',
+    sourceLabel: 'Anúncio oficial do Google',
+    featured: false,
+  },
+  {
+    id: 'audio-ia-audiovisual-2026',
+    title: 'Áudio com IA no audiovisual: o que muda na produção de conteúdo',
+    slug: 'audio-ia-audiovisual',
+    category: 'Audiovisual · IA',
+    date: '28 setembro 2026',
+    readTime: '3 min de leitura',
+    author: 'Equipe Blend Digital',
+    authorRole: 'Blend News',
+    imageUrl: '',
+    excerpt: 'Com ferramentas de música, voz e efeitos, a Adobe amplia as opções de produção. Direção criativa e direitos de uso continuam essenciais.',
+    content: `A Adobe anunciou em agosto a disponibilidade ampla de ferramentas de áudio no Firefly para gerar música, locução e efeitos sonoros. A mudança reúne mais etapas criativas em um mesmo ambiente e oferece novas maneiras de construir a identidade sonora de vídeos.
+
+Para marcas, isso pode ajudar a experimentar versões de um conteúdo e ajustar ritmo, voz e atmosfera. Mas uma ferramenta mais rápida não decide sozinha o que a peça precisa comunicar.
+
+### Direção vem antes da ferramenta
+
+Um vídeo institucional, uma cobertura de evento e um anúncio curto pedem escolhas diferentes. A trilha deve apoiar a mensagem; a locução precisa combinar com o tom da marca; e os efeitos devem ajudar a contar a história. Também é essencial conferir as condições de uso e aprovação de cada material antes da publicação comercial.
+
+### O olhar da Blend
+
+1. Qual é a mensagem principal do vídeo?
+2. A voz e o som representam bem a marca?
+3. O material pode ser usado no canal e na campanha planejados?
+
+IA pode acelerar a produção e abrir opções criativas. O resultado ainda depende de roteiro, repertório, revisão humana e uma intenção clara para cada peça.
+
+A Adobe anunciou a disponibilidade das ferramentas de áudio do Firefly em 20 de agosto de 2026. As afirmações sobre recursos e licenciamento são da Adobe; confira os termos aplicáveis ao projeto.`,
+    sourceUrl: 'https://blog.adobe.com/en/publish/2026/08/20/adobe-firefly-expands-its-creative-ai-studio-generate-music-speech-and-sound-effects-in-one-place',
+    sourceLabel: 'Anúncio oficial da Adobe',
+    featured: false,
+  },
   // 1. Matéria de Capa Oficial da Revista Blend News Edição #01
   {
     id: 'a-musica-que-transforma-vidas',
