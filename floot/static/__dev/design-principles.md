@@ -1,0 +1,4 @@
+Distinctive thread: editorial-tech confidence — premium digital agency energy built from deep graphite, warm off-white, Blend bordô accents (#800509), oversized type, crisp grid lines, and restrained motion. The visual language should feel like a strategy studio rather than a generic marketing template.
+Modes: light-first with a complete dark palette.
+Pacing: generous.
+Global character: layered soft surfaces, subtle borders instead of heavy shadows, medium-radius cards, bold display typography with quiet sans-serif body copy, bordô reserved for actions/highlights, and used more prominently on service and method cards, occasional uppercase micro-labels, and polished scroll reveals.

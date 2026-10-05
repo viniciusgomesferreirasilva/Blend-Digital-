@@ -1,0 +1,1 @@
+Blend Digital é uma agência/estúdio de estratégia, conteúdo, design e tecnologia. O site deve transmitir profissionalismo, criatividade e clareza comercial, com estética editorial-tech em off-white, grafite e bordô #800509; títulos em Bricolage Grotesque com destaques na mesma fonte. A home apresenta proposta de valor, serviços, diferenciais, processo e contato.
